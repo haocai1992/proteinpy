@@ -5,10 +5,10 @@ import os.path
 import pandas as pd
 import mrcfile
 
-from proteinpy.Structure import Structure
-from proteinpy.Contact import Contact
-from proteinpy.Network import Network
-from proteinpy.ElectronDensity import ElectronDensity
+from proteinpy.structure import Structure
+from proteinpy.contact import Contact
+from proteinpy.network import Network
+from proteinpy.electron_density import ElectronDensity
 
 class Parser:
     """Parse a PDB/DSSP/CCP4 file and returns a DataFrame object."""
