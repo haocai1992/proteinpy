@@ -3,7 +3,7 @@
 from __future__ import print_function
 
 
-from .Parser import Parser
-from .Structure import Structure
-from .Contact import Contact
-from .Network import Network
+from .parser import Parser
+from .structure import Structure
+from .contact import Contact
+from .network import Network
