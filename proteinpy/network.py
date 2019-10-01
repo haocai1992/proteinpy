@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
-from proteinpy.GeometryFuncs import *
+from proteinpy.geometry_funcs import *
 
 class Network:
     """Parse a PDB/DSSP/CCP4 file and returns a DataFrame object."""
