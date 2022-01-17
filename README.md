@@ -1,8 +1,11 @@
+![](proteinpy-banner.jpg)
+*(Photo by <a href="https://unsplash.com/@nci?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">National Cancer Institute</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>)</p>*
+
 # proteinpy - handling protein structures using dataframes
 **proteinpy** is a bioinformatic package for parsing and analysis of protein structure data (PDB, DSSP and CCP4 format) using pandas dataframes. This is a tool developed for my research work on computational protein structural physics. In structural biology, I found that there isn't a handy Python package that converts PDB files to pandas dataframe, which allows using various machine learning methods to get biophysical insights from PDB bank. Therefore I decided to create this package.<br></br>
 
 ## Installation and Usage
-Currently, **proteinpy** can only be installed from Github by cloning this repository to your local directory.
+**proteinpy** can be installed from Github by cloning this repository to your local directory.
 ```
 git clone https://github.com/haocai1992/proteinpy.git
 ```
@@ -15,21 +18,21 @@ After cloning this repository, run the following code:
 cd proteinpy
 sudo python setup.py install
 ```
-Substitute `python` with your specific version if required, for example `python3`, or `pypy3`.
+Replace `python` with your specific version if required, for example `python3`, or `pypy3`.
 
 ## Usage and Examples
-### Import **proteinpy**
+### Import **`proteinpy`** package
 Before using **proteinpy**, you will need to import it in your python file:
 ```
 from proteinpy import *
 ```
-### Parse PDB/DSSP/CCP4 file
+### Parse `PDB/DSSP/CCP4` file
  You can parse your local files into a `Parser` object in one line:
 ```
 # Parse local PDB (and DSSP/CCP4) file in your local directory.
 parser = Parser('3eiy')
 ```
-### Structure
+### Use `Structure` class to analyze protein structures
 Then, you can analyze protein structures using dataframe:
 ```
 # protein structure dataframe.
@@ -55,7 +58,7 @@ You can also get the 3D coordinates (x, y, z) of a specified atom in the structu
 special_atom = '3eiy.A.3.ARG.CA'
 special_atom_coords = structure.get_coordinate(special_atom)
 ```
-### Contact
+### Use `Contact` class to study protein-protein and protein-water interactions
 The main purpose of my research was to look at intra-molecular interactions. Therefore I created a `Contact` class to store interactions between atoms:
 ```
 # protein contact dataframe.
@@ -81,13 +84,13 @@ For any two atoms in contact, you can also get a (x, y, z) vector connecting the
 vec = contact.get_vector(atom1='3eiy.A.3.ARG.CA',\
 						 atom2='3eiy.A.12.LYS.CB')
 ```
-### Network
+### Use `Network` class to explore interaction network in protein structure
 In protein structure, every atom interaction with other atoms and forms a interaction network. I created a `Network` class to represent this network:
 ```
 # protein contact network.
 network = parser.network
 ```
-I used [`NetworkX`](https://github.com/networkx/networkx) to store network data, and also to explore special shapes, for example water tetrahedrons, pentagons, and hexagons within this network:
+I use Python's [`NetworkX`](https://github.com/networkx/networkx) package to store network data, and also to explore special shapes, for example water tetrahedrons, pentagons, and hexagons within this network:
 ```
 # entire network of all atom-atom contacts.
 allnet = network.allnet
