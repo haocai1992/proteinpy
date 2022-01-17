@@ -1,5 +1,6 @@
-![](proteinpy-banner.jpg)
-*(Photo by <a href="https://unsplash.com/@nci?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">National Cancer Institute</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>)</p>*
+![](proteinpy-logo.png)
+<!-- ![](proteinpy-banner.jpg) -->
+<!-- *(Photo by <a href="https://unsplash.com/@nci?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">National Cancer Institute</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>)</p>* -->
 
 # proteinpy - handling protein structures using dataframes
 **`proteinpy`** is a bioinformatic package for parsing and analysis of protein structure data (`PDB`, `DSSP` and `CCP4` format) using pandas dataframes. This is a tool developed for my research work on computational protein structural physics. In structural biology, there hasn't been a handy Python package that converts PDB files to pandas dataframe, which allows using various machine learning methods to get biophysical insights from PDB bank. Therefore I decided to create this package.<br></br>
